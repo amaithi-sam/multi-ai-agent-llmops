@@ -31,7 +31,9 @@ if st.button("Ask Agent") and user_query.strip():
     try:
         logger.info("Sending REquest to backend ")
 
-        response = requests.post(API_URL, payload)
+        response = requests.post(API_URL, json=payload)
+
+        logger.info(response)
 
         if response.status_code == 200:
             agent_response = response.json().get("response", "")
@@ -49,6 +51,6 @@ if st.button("Ask Agent") and user_query.strip():
         logger.error("Error occured while sending request to backend")
         st.error(str(CustomException("failed to communicate to backend")))
 
-        
+
 
 

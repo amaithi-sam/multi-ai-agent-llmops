@@ -651,3 +651,5 @@ Follow these steps to deploy your app to **AWS ECS Fargate** using Jenkins and a
 ### ✅ **Deployment Complete**
 
 Your app is now deployed to AWS ECS Fargate. You can access it via the public IP at port `8501`. The deployment process has been automated using Jenkins, and the app is now live.
+
+poetry run python -m uvicorn app.backend.api:app --host "127.0.0.1" --port "9999"
