@@ -1,0 +1,37 @@
+# Git
+.git
+.gitignore
+.github
+
+# Python / Poetry
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.poetry/
+
+# Environment and Secrets
+# .env
+.env.*
+secrets.toml
+
+# IDEs and OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Documentation and Notebooks
+docs/
+*.md
+.ipynb_checkpoints/
+
+# AI Models and Large Data
+# (These should be handled via Volumes, not baked into the image)
+data/
+cache/
+models/
