@@ -1,0 +1,22 @@
+services:
+  # The "unified" app service (using your main.py threading)
+  ai-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: multi-ai-agent-llmops
+    ports:
+      - "8501:8501"  # Streamlit
+      - "9999:9999"  # FastAPI
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - .:/app  # Hot-reloading: changes to local files reflect in container
+    restart: always
+
+networks:
+  default:
+    name: llmops-network

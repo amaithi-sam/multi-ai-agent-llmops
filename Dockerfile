@@ -10,7 +10,7 @@ ENV POETRY_VERSION=2.0.1 \
 
 # 3. Work Directory
 WORKDIR /app
-
+ENV PYTHONPATH=/app
 # 4. System Dependencies
 # Added libgomp1 for FAISS/AI library stability
 RUN apt-get update && apt-get install -y --no-install-recommends \
