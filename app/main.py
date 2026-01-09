@@ -37,7 +37,8 @@ def run_frontend():
         subprocess.run([
             sys.executable, "-m", "streamlit", 
             "run", "app/frontend/ui.py",
-            "--server.port", "8501" 
+            "--server.port", "8501",
+            "--server.address", "0.0.0.0" 
         ], check=True)
     except Exception as e:
         logger.error(f"Frontend failed: {e}")

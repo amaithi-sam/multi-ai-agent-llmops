@@ -40,4 +40,4 @@ EXPOSE 9999
 
 # 10. Run the app
 # Using python -m ensures your main.py is the entry point
-CMD ["python", "app/main.py"]
+CMD ["python", "-m", "app.main"]
